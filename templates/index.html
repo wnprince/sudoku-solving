@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    
+    <!-- Title -->
+    <title>Sudoku Solver</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Sudoku Solver</a>
+        </div>
+    </nav>
+            
+            
+    <table>
+        <tr>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+        </tr>
+        <tr>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+        </tr>
+        <tr>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+        </tr>
+        <tr>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+        </tr>
+        <tr>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+        </tr>
+        <tr>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+        </tr>
+        <tr>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+        </tr>
+        <tr>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+        </tr>
+        <tr>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+            <td> <input class="box" onkeypress="allowNumbersOnly(event)" type="text" maxlength="1" name="" id=""> </td>
+        </tr>
+    </table>
+
+    <div id="lol"></div>
+    <center>
+        <button class="btn btn-outline-success" onclick="send()">Submit</button>
+        <button class="btn btn-outline-danger" onclick="reset()">Reset</button>
+    </center>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+    <!-- Popper.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap JS CDN -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Main Script FIle -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

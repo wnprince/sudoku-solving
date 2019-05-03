@@ -1,0 +1,44 @@
+.navbar-header {
+    float: left;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.navbar-brand {float:none;}
+
+.box{
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
+    text-align: center;
+}
+
+table {
+    margin: 1em auto;
+    border-collapse:collapse;
+}
+
+td {
+    height: 60px;
+    width: 60px;
+    padding: 0;
+    border: 1px solid;
+    text-align: center;
+}
+
+td:first-child {
+    border-left: solid;
+}
+
+td:nth-child(3n) {
+    border-right: solid ;
+}
+
+tr:first-child {
+    border-top: solid;
+}
+  
+tr:nth-child(3n) td {
+    border-bottom: solid;
+}
