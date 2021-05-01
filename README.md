@@ -1,8 +1,8 @@
 # Sudoku Solver
 
-## About
+Ever solved a sudoku puzzle. It's tricky right? Don't worry! With this app you can get any valid sudoku puzzle solved within seconds. Just enter the sudoku config and hit submit.
 
-This app can solve any valid sudoku puzzle. Just enter the sudoku config and hit submit. 
+**Live Preview** : https://sudoku-solving-application.herokuapp.com/
 
 ## Project Structure
 
@@ -18,27 +18,25 @@ This app can solve any valid sudoku puzzle. Just enter the sudoku config and hit
 ├── README.md
 ```
 
-## Dependencies
+## Technologies used
+
+[<img align="left" alt="React" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png" />](#)
+[<img align="left" alt="React" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/flask/flask.png" />](#)
+[<img align="left" alt="React" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/html/html.png" />](#)
+[<img align="left" alt="React" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/css/css.png" />](#)
+[<img align="left" alt="React" width="26px" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png" />](#) <br/>
+
+## Running the app locally
 
 You will require the following python modules if you wish to run this app
 
-- astroid==2.2.5
-- Click==7.0
-- colorama==0.4.1
-- Flask==1.0.2
-- isort==4.3.17
+- click==7.1.2
+- Flask==1.1.2
+- gunicorn==20.1.0
 - itsdangerous==1.1.0
-- Jinja2==2.10.1
-- lazy-object-proxy==1.3.1
+- Jinja2==2.11.3
 - MarkupSafe==1.1.1
-- mccabe==0.6.1
-- pylint==2.3.1
-- six==1.12.0
-- typed-ast==1.3.5
-- Werkzeug==0.15.2
-- wrapt==1.11.1
-
-## How to run
+- Werkzeug==1.0.1
 
 To run the app, set uo a virtual environment, and install the modules mentioned in the requirements.txt using the following command:-
 
