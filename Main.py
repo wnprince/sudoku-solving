@@ -29,7 +29,7 @@ class SudokuSolver:
         for i in self.row_units:
             row_elements = []
             for j in i:
-                if d[j] is not '123456789' and d[j] in row_elements:
+                if d[j] != '123456789' and d[j] in row_elements:
                     return False
                 else:
                     row_elements.append(d[j])
@@ -38,7 +38,7 @@ class SudokuSolver:
         for i in self.column_units:
             col_elements = []
             for j in i:
-                if d[j] is not '123456789' and d[j] in col_elements:
+                if d[j] != '123456789' and d[j] in col_elements:
                     return False
                 else:
                     col_elements.append(d[j])
@@ -47,7 +47,7 @@ class SudokuSolver:
         for i in self.square_units:
             square_elements = []
             for j in i:
-                if d[j] is not '123456789' and d[j] in square_elements:
+                if d[j] != '123456789' and d[j] in square_elements:
                     return False
                 else:
                     square_elements.append(d[j])
